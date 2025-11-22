@@ -1,0 +1,12 @@
+/* Configurações globais */
+* {
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Ajuste para compensar header fixo */
+body {
+    padding-top: 80px;
+}
