@@ -12,11 +12,12 @@
 
 #topo .container {
     width: 100%;
-    margin: 0 auto;                        /* 0 -> Superior e inferiro; auto -> esquerda e direira automáticamente */
-    padding: 0 20px;                       /* 0 -> cima e embaixo; 20px esquerda e direita */
-    display: flex;                         /* Obedecem o flexbox */
-    justify-content: space-between;        /* Divide os itens entre esquerda e direita */
-    align-items: center;                   /* Alinha os itens verticalmente no centro */
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 #topo .logo-title {
@@ -44,6 +45,7 @@
         display: flex;
         list-style: none;
         gap: 25px;
+        flex-wrap: wrap;
     }
 
     a {
@@ -54,6 +56,41 @@
 
         &:hover {
             color: #3498db;
+        }
+    }
+}
+
+/* Media queries para dispositivos móveis */
+@media (max-width: 768px) {
+    #topo {
+        padding: 10px 0;
+    }
+
+    #topo .container {
+        flex-direction: column;
+        gap: 15px;
+        padding: 0 15px;
+    }
+
+    #topo .logo-title {
+        gap: 10px;
+
+        img {
+            height: 30px;
+        }
+
+        h1 {
+            font-size: 1rem;
+            text-align: center;
+        }
+    }
+
+    #topo nav ul {
+        gap: 15px;
+        justify-content: center;
+
+        li a {
+            font-size: 0.9rem;
         }
     }
 }
