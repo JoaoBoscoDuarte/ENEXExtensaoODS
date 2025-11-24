@@ -26,6 +26,10 @@
 
     img {
         height: 40px;
+
+        &:first-child {
+            margin-right: 5px;
+        }
     }
 
     h1 {
