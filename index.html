@@ -14,6 +14,7 @@
     <script src="js/equipe.js"></script>
     <script src="js/resultados.js"></script>
     <script src="js/municipios.js"></script>
+    <script src="js/relatorios.js"></script>
 </head>
 
 <body>
@@ -197,19 +198,37 @@
                 <h2>Relatórios Completos</h2>
 
                 <article>
-                    <p>Abaixo estão os relatórios completos para visualização:</p>
+                    <p>Selecione o município e o tipo de documento para visualização:</p>
 
-                    <!-- Exemplo de embedded PDF do Google Drive -->
-                    <div class="relatorio">
-                        <h3>Relatório 1</h3>
-                        <iframe src="https://drive.google.com/file/d/SEU_ARQUIVO/preview" width="100%" height="600">
-                        </iframe>
+                    <div class="controles-relatorio">
+                        <div class="seletor-municipio">
+                            <label for="select-municipio">Município:</label>
+                            <select id="select-municipio">
+                                <option value="">Selecione um município</option>
+                            </select>
+                        </div>
+                        
+                        <div class="seletor-tipo">
+                            <label>Tipo de documento:</label>
+                            <div class="radio-group">
+                                <input type="radio" id="tipo-relatorio" name="tipo-documento" value="relatorio" checked>
+                                <label for="tipo-relatorio">Relatório</label>
+                                
+                                <input type="radio" id="tipo-slide" name="tipo-documento" value="slide">
+                                <label for="tipo-slide">Slide</label>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="relatorio">
-                        <h3>Relatório 2</h3>
-                        <iframe src="https://drive.google.com/file/d/OUTRO_ARQUIVO/preview" width="100%" height="600">
-                        </iframe>
+                    <div class="viewer-container">
+                        <div id="placeholder-relatorio" class="placeholder">
+                            <p>Selecione um município para visualizar o documento</p>
+                        </div>
+                        <div id="erro-acesso" class="erro-container" style="display: none;">
+                            <p>Não foi possível carregar o documento no visualizador.</p>
+                            <a id="link-direto" href="#" target="_blank" class="btn-link">Abrir documento em nova aba</a>
+                        </div>
+                        <iframe id="pdf-viewer" style="display: none;" width="100%" height="700" frameborder="0"></iframe>
                     </div>
 
                 </article>
@@ -232,8 +251,13 @@
         <section id="quem-somos">
             <div class="container">
                 <h2>Quem Somos Nós</h2>
-                <div id="equipe-container" class="equipe-grid">
-                    <!-- Os integrantes serão carregados dinamicamente -->
+                <div class="equipe-grid">
+                    <div id="primeira-linha" class="primeira-linha">
+                        <!-- Primeiros 4 integrantes -->
+                    </div>
+                    <div id="segunda-linha" class="segunda-linha">
+                        <!-- Últimos 3 integrantes -->
+                    </div>
                 </div>
             </div>
         </section>
