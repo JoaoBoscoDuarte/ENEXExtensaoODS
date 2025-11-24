@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="js/equipe.js"></script>
     <script src="js/resultados.js"></script>
+    <script src="js/municipios.js"></script>
 </head>
 
 <body>
@@ -22,7 +23,9 @@
         <div class="container">
 
             <div class="logo-title">
-                <img src="assets/ufpb.png" alt="Logo UFPB">
+                <a href="https://ufpb.br/" target="_blank">
+                    <img src="assets/ufpb.png" alt="Logo UFPB">
+                </a>
                 <img src="assets/icon-atlas.svg" alt="">
                 <h1>
                     Diagnósticos Socioeconômicos do<br>
@@ -69,6 +72,15 @@
                         eficazes. A iniciativa reúne dados recentes, análises e eventos de divulgação para fortalecer o
                         planejamento municipal e o avanço da Agenda 2030 na região.
                     </p>
+                    
+                    <div class="logos-introducao">
+                        <a href="https://www.ufpb.br/ufpb/contents/noticias/encontro-unificado-da-ufpb-comeca-nesta-segunda-25-com-apresentacao-de-mais-de-3-600-trabalhos" target="_blank">
+                            <img src="assets/encontro_unificado.png" alt="Logo Encontro Unificado">
+                        </a>
+                        <a href="https://www.proex.ufpb.br/" target="_blank">
+                            <img src="assets/PROEXFULL.png" alt="Logo PROEX">
+                        </a>
+                    </div>
                 </article>
             </div>
         </section>
@@ -140,6 +152,20 @@
                         </li>
                     </ul>
                 </article>
+            </div>
+        </section>
+
+        <!-- MUNICÍPIOS -->
+        <section id="municipios">
+            <div class="container">
+                <h2>Municípios da Região</h2>
+                <div class="carrossel-municipios">
+                    <div class="carrossel-track" id="carrossel-municipios">
+                        <!-- Cards dos municípios serão gerados dinamicamente -->
+                    </div>
+                    <button class="carrossel-btn prev" id="btn-prev">‹</button>
+                    <button class="carrossel-btn next" id="btn-next">›</button>
+                </div>
             </div>
         </section>
 
@@ -250,9 +276,15 @@
                 </div>
                 
                 <div class="logos-footer">
-                    <img src="assets/ufpb.png" alt="Logo UFPB">
-                    <img src="assets/encontro_unificado.png" alt="Logo Encontro Unificado">
-                    <img src="assets/PROEXFULL.png" alt="Logo PROEX">
+                    <a href="https://ufpb.br/" target="_blank">
+                        <img src="assets/ufpb.png" alt="Logo UFPB">
+                    </a>
+                    <a href="https://www.ufpb.br/ufpb/contents/noticias/encontro-unificado-da-ufpb-comeca-nesta-segunda-25-com-apresentacao-de-mais-de-3-600-trabalhos" target="_blank">
+                        <img src="assets/encontro_unificado.png" alt="Logo Encontro Unificado">
+                    </a>
+                    <a href="https://www.proex.ufpb.br/" target="_blank">
+                        <img src="assets/PROEXFULL.png" alt="Logo PROEX">
+                    </a>
                 </div>
             </div>
         </div>
