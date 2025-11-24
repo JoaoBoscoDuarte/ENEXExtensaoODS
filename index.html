@@ -12,6 +12,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/equipe.js"></script>
+    <script src="js/resultados.js"></script>
 </head>
 
 <body>
@@ -21,6 +22,7 @@
         <div class="container">
 
             <div class="logo-title">
+                <img src="assets/ufpb.png" alt="Logo UFPB">
                 <img src="assets/icon-atlas.svg" alt="">
                 <h1>
                     Diagnósticos Socioeconômicos do<br>
@@ -36,7 +38,7 @@
                     <li><a href="#resultados">Resultados</a></li>
                     <li><a href="#relatorios">Relatórios</a></li>
                     <li><a href="#conclusao">Conclusão</a></li>
-                    <li><a href="#equipe">Equipe</a></li>
+                    <li><a href="#quem-somos">Equipe</a></li>
                     <li><a href="#referencias">Referências</a></li>
                 </ul>
             </nav>
@@ -147,8 +149,18 @@
                 <h2>Resultados Gerais</h2>
                 <article>
                     <p>
-                        <!-- Texto aqui -->
+                        Os indicadores apresentados a seguir oferecem um panorama socioeconômico dos municípios da Região Metropolitana do Vale do Mamanguape, organizados por áreas temáticas dos ODS.
                     </p>
+                    
+                    <div class="filtros" id="filtros-container">
+                        <!-- Filtros serão gerados dinamicamente -->
+                    </div>
+                    
+                    <div class="tabela-wrapper">
+                        <table id="tabela-resultados" class="tabela-indicadores">
+                            <!-- Tabela será gerada dinamicamente -->
+                        </table>
+                    </div>
                 </article>
             </div>
         </section>
@@ -191,7 +203,7 @@
         </section>
 
         <!-- QUEM SOMOS -->
-        <section id="equipe">
+        <section id="quem-somos">
             <div class="container">
                 <h2>Quem Somos Nós</h2>
                 <div id="equipe-container" class="equipe-grid">
@@ -224,7 +236,25 @@
     <!-- ===================== FOOTER ======================= -->
     <footer>
         <div class="container">
-            <p>&copy; 2025 - Projeto de Extensão ODS</p>
+            <div class="footer-content">
+                <div class="projeto-info">
+                    <h3>DIAGNÓSTICO SOCIOECONÔMICO DOS MUNICÍPIOS DA REGIÃO METROPOLITANA DO VALE DO MAMANGUAPE PARA A TERRITORIALIZAÇÃO DOS OBJETIVOS DE DESENVOLVIMENTO SUSTENTÁVEL</h3>
+                    <p><strong>Duração:</strong> 2024 - 2025</p>
+                    <p><strong>Departamento:</strong> CCAE - DEPARTAMENTO DE CIÊNCIAS SOCIAIS APLICADAS / UFPB</p>
+                    <p><strong>Campus:</strong> Campus IV (Rio Tinto e Mamanguape)</p>
+                </div>
+                
+                <div class="evento-info">
+                    <p><strong>Evento:</strong> XXVI Encontro de Extensão (ENEX), XXVII Encontro de Iniciação à Docência (ENID) e XXXIII Encontro de Iniciação Científica (ENIC) - XIII Encontro Unificado de Ensino, Pesquisa e Extensão da UFPB</p>
+                    <p><strong>Data:</strong> 02 e 04 de dezembro - Campus IV (Rio Tinto e Mamanguape)</p>
+                </div>
+                
+                <div class="logos-footer">
+                    <img src="assets/ufpb.png" alt="Logo UFPB">
+                    <img src="assets/encontro_unificado.png" alt="Logo Encontro Unificado">
+                    <img src="assets/PROEXFULL.png" alt="Logo PROEX">
+                </div>
+            </div>
         </div>
     </footer>
 
