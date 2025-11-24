@@ -4,9 +4,10 @@ async function carregarEquipe() {
         const response = await fetch('data/equipe.json');
         const equipe = await response.json();
         
-        const container = document.getElementById('equipe-container');
+        const primeiraLinha = document.getElementById('primeira-linha');
+        const segundaLinha = document.getElementById('segunda-linha');
         
-        equipe.forEach(integrante => {
+        equipe.forEach((integrante, index) => {
             const card = document.createElement('div');
             card.className = 'integrante-card';
             
@@ -18,7 +19,12 @@ async function carregarEquipe() {
                 <a href="${integrante.lattes}" target="_blank" class="lattes-link">Currículo Lattes</a>
             `;
             
-            container.appendChild(card);
+            // Primeiros 4 na primeira linha, restantes na segunda
+            if (index < 4) {
+                primeiraLinha.appendChild(card);
+            } else {
+                segundaLinha.appendChild(card);
+            }
         });
     } catch (error) {
         console.error('Erro ao carregar dados da equipe:', error);
