@@ -46,6 +46,8 @@
                     border-radius: 5px;
                     font-size: 1rem;
                     min-width: 200px;
+                    width: auto;
+                    max-width: 100%;
                 }
             }
         }
@@ -108,6 +110,28 @@
                             }
                         }
                     }
+                }
+            }
+        }
+    }
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+    #resultados {
+        .filtros {
+            flex-direction: column;
+            gap: 15px;
+            
+            label {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 5px;
+                
+                select {
+                    min-width: auto;
+                    width: 100%;
+                    max-width: none;
                 }
             }
         }
